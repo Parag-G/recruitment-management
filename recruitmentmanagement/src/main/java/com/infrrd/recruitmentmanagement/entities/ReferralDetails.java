@@ -2,6 +2,7 @@ package com.infrrd.recruitmentmanagement.entities;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -31,7 +32,11 @@ public class ReferralDetails implements Serializable {
 
 	@OneToMany
 	@JoinColumn(name = "candidate_id")
-	private CandidateDetails candidate;
+	private List<CandidateDetails> candidate;
+
+	public void setCandidate(List<CandidateDetails> candidate) {
+		this.candidate = candidate;
+	}
 
 	@Column(name = "referral_detials_status")
 	private int referralDetialsStatus;
@@ -72,13 +77,13 @@ public class ReferralDetails implements Serializable {
 		this.emplpoyeeEmailAddress = emplpoyeeEmailAddress;
 	}
 
-	public CandidateDetails getCandidate() {
+	/*public CandidateDetails getCandidate() {
 		return candidate;
 	}
 
 	public void setCandidate(CandidateDetails candidate) {
 		this.candidate = candidate;
-	}
+	}*/
 
 
 	public int getReferralDetialsStatus() {

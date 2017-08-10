@@ -2,6 +2,7 @@ package com.infrrd.recruitmentmanagement.entities;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -49,7 +50,11 @@ public class JdRequiredSkillDetails implements Serializable {
 
 	@ManyToMany
 	@JoinColumn(name = "job_description_id")
-	private JobDescriptionDetails jobDescription;
+	private List<JobDescriptionDetails> jobDescription;
+
+	public void setJobDescription(List<JobDescriptionDetails> jobDescription) {
+		this.jobDescription = jobDescription;
+	}
 
 	public long getJdRequiredSkillId() {
 		return jdRequiredSkillId;
@@ -115,13 +120,13 @@ public class JdRequiredSkillDetails implements Serializable {
 		this.modifiedBy = modifiedBy;
 	}
 
-	public JobDescriptionDetails getJobDescription() {
+	/*public JobDescriptionDetails getJobDescription() {
 		return jobDescription;
 	}
 
 	public void setJobDescription(JobDescriptionDetails jobDescription) {
 		this.jobDescription = jobDescription;
-	}
+	}*/
 
 	@Override
 	public String toString() {

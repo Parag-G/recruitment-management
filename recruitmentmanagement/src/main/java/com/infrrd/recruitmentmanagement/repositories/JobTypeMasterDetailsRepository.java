@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface JobTypeMasterDetailsRepository extends JpaRepository<JobTypeMasterDetails, Long> {
 
-	public List<JobTypeMasterDetails> findByJobTypeMasterId(long jobTypeMasterId);
+	//public List<JobTypeMasterDetails> findByJobTypeMasterId(long jobTypeMasterId);
 }
