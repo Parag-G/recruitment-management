@@ -25,8 +25,9 @@ public class SelectedCandidateDetails implements Serializable {
 	@Column(name = "selected_candidate_id")
 	private long selectedCandidateId;
 
-	@OneToOne
-	@JoinColumn(name = "candidate_id")
+//	@OneToOne
+//	@JoinColumn(name = "candidate_id")
+	@Column(name = "candidate_id")
 	private CandidateDetails candidate;
 
 	@Column(name = "joining_status")

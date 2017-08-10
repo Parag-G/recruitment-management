@@ -1,7 +1,7 @@
 package com.infrrd.recruitmentmanagement.entities;
 
 import java.io.Serializable;
-import java.security.Timestamp;
+import java.sql.Timestamp;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -63,8 +63,8 @@ public class SourceMasterDetails implements Serializable {
 		return createdOn;
 	}
 
-	public void setCreatedOn(Timestamp createdOn) {
-		this.createdOn = createdOn;
+	public void setCreatedOn(Timestamp timestamp) {
+		this.createdOn = timestamp;
 	}
 
 	public String getCreatedBy() {

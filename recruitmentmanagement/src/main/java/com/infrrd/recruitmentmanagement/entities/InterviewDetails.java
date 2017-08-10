@@ -23,8 +23,9 @@ public class InterviewDetails implements Serializable {
 	@Column(name = "interview_id")
 	private long interviewId;
 	
-	@OneToOne
-	@JoinColumn(name = "candidate_id")
+	//@OneToOne
+	//@JoinColumn(name = "candidate_id")
+	@Column(name = "candidate_id")
 	private CandidateDetails candidate;
 	
 	@Column(name = "employee_id")

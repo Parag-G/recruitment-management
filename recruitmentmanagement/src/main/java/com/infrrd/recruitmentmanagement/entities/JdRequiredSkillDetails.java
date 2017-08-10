@@ -47,8 +47,9 @@ public class JdRequiredSkillDetails implements Serializable {
 	@Column(name = "modified_by")
 	private String modifiedBy;
 
-	@ManyToMany
-	@JoinColumn(name = "job_description_id")
+//	@ManyToMany
+//	@JoinColumn(name = "job_description_id")
+	@Column(name = "job_description_id")
 	private JobDescriptionDetails jobDescription;
 
 	public long getJdRequiredSkillId() {

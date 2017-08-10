@@ -29,8 +29,8 @@ public class ReferralDetails implements Serializable {
 	@Column(name = "emplpoyee_email_address")
 	private String emplpoyeeEmailAddress;
 
-	@OneToMany
-	@JoinColumn(name = "candidate_id")
+	
+	@Column(name = "candidate_id")
 	private CandidateDetails candidate;
 
 	@Column(name = "referral_detials_status")

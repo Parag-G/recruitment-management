@@ -27,8 +27,9 @@ public class JobDescriptionDetails implements Serializable{
 	@Column(name = "job_description_id")
 	private long jobDescriptionId;
 
-	@OneToOne
-	@JoinColumn(name="domain_master_id")
+//	@OneToOne
+//	@JoinColumn(name="domain_master_id")
+	@Column(name="domain_master_id")
 	private DomainMasterDetails domainMaster;
 	
 	@Column(name="job_position")
@@ -40,8 +41,9 @@ public class JobDescriptionDetails implements Serializable{
 	@Column(name="vacancies")
 	private long vacancies;
 	
-	@OneToOne
-	@JoinColumn(name="job_type_master_id")
+//	@OneToOne
+//	@JoinColumn(name="job_type_master_id")
+	@Column(name="job_type_master_id")
 	private JobTypeMasterDetails jobTypeMaster;
 
 	@Column(name="job_description_status")
