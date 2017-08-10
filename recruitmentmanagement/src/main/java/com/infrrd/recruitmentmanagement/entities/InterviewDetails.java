@@ -1,12 +1,13 @@
 package com.infrrd.recruitmentmanagement.entities;
 
 import java.io.Serializable;
-import java.security.Timestamp;
+import java.sql.Timestamp;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -23,9 +24,8 @@ public class InterviewDetails implements Serializable {
 	@Column(name = "interview_id")
 	private long interviewId;
 	
-	//@OneToOne
-	//@JoinColumn(name = "candidate_id")
-	@Column(name = "candidate_id")
+	@ManyToOne
+	@JoinColumn(name = "candidate_id")
 	private CandidateDetails candidate;
 	
 	@Column(name = "employee_id")
@@ -56,7 +56,7 @@ public class InterviewDetails implements Serializable {
 	private String modifiedBy;
 	
 	@Column(name = "interview_status")
-	private String interviewStatus;
+	private int interviewStatus;
 
 	public long getInterviewId() {
 		return interviewId;
@@ -146,7 +146,7 @@ public class InterviewDetails implements Serializable {
 		this.modifiedBy = modifiedBy;
 	}
 
-	public String getInterviewStatus() {
+	public int getInterviewStatus() {
 		return interviewStatus;
 	}
 
@@ -159,7 +159,7 @@ public class InterviewDetails implements Serializable {
 				+ "]";
 	}
 
-	public void setInterviewStatus(String interviewStatus) {
+	public void setInterviewStatus(int interviewStatus) {
 		this.interviewStatus = interviewStatus;
 	}
 

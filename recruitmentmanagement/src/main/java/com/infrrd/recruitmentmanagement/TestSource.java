@@ -20,20 +20,21 @@ public class TestSource
 
 
  
-    public void testDB()
+    public SourceMasterDetails testDB()
     {
         SourceMasterDetails sourceMasterDetails = new SourceMasterDetails();
-        sourceMasterDetails.setSourceMasterId( 2 );
-        sourceMasterDetails.setSourceName( "FresherWorld.com" );
+        sourceMasterDetails.setSourceMasterId( 3 );
+        sourceMasterDetails.setSourceName( "HackerEarth.com" );
         sourceMasterDetails.setSourceStatus( 1 );
         sourceMasterDetails.setComments( "good" );
         sourceMasterDetails.setCreatedOn( new Timestamp( System.currentTimeMillis() ) );
-        sourceMasterDetails.setCreatedBy( "parag" );
+        sourceMasterDetails.setCreatedBy( "harshita" );
         sourceMasterDetails.setModifiedOn( new Timestamp( System.currentTimeMillis() ) );
         sourceMasterDetails.setModifiedBy( "shivansh" );
 
         sourceMasterDetails = sourceMasterDetailsRepository.save( sourceMasterDetails );
         System.out.println( "suceesfully stored!" );
+        return sourceMasterDetails;
     }
 
 }

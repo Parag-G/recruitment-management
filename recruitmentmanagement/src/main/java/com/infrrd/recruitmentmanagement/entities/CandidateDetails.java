@@ -1,7 +1,7 @@
 package com.infrrd.recruitmentmanagement.entities;
 
 import java.io.Serializable;
-import java.security.Timestamp;
+import java.sql.Timestamp;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -36,7 +36,7 @@ public class CandidateDetails implements Serializable {
 	private String candidateAddress;
 	
 	@Column(name = "candidate_phone")
-	private int candidatePhone;
+	private String candidatePhone;
 	
 	@Column(name = "candidate_email_address")
 	private String candidateEmailAddress;
@@ -58,7 +58,7 @@ public class CandidateDetails implements Serializable {
 	private String modifiedBy;
 	
 	@Column(name = "candidate_status")
-	private String candidateStatus;
+	private int candidateStatus;
 
 	public long getCandidateId() {
 		return candidateId;
@@ -100,11 +100,11 @@ public class CandidateDetails implements Serializable {
 		this.candidateAddress = candidateAddress;
 	}
 
-	public int getCandidatePhone() {
+	public String getCandidatePhone() {
 		return candidatePhone;
 	}
 
-	public void setCandidatePhone(int candidatePhone) {
+	public void setCandidatePhone(String candidatePhone) {
 		this.candidatePhone = candidatePhone;
 	}
 
@@ -124,11 +124,11 @@ public class CandidateDetails implements Serializable {
 		this.sourceMaster = sourceMaster;
 	}
 
-	public String getCandidateStatus() {
+	public int getCandidateStatus() {
 		return candidateStatus;
 	}
 	
-	public void setCandidateStatus(String candidateStatus) {
+	public void setCandidateStatus(int candidateStatus) {
 		this.candidateStatus = candidateStatus;
 	}
 
